@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <style>
+      .container{
+        background-image: linear-gradient(45deg, dodgerblue,white,purple);
+        border-radius:10px;   
+    }
+  .form{
+    border-radius:10px;
+    padding:0px 300px;
+  }
+  label{
+    width:140px;
+    display: inline-block;
+    font-size:20px;
+    font-weight:bold;
+    font-family: "Times New Roman", Times, serif;
+    
+    
+  }
+
+  input{
+    padding:4px;
+    margin:5px;
+    font-size:18px;
+    border-radius:10px;
+    border: 1px solid #f9f9f9;
+    width:7cm;
+  }
+
+  .btn{
+    color:white;
+    font-weight:bold;
+    background-color:red;
+    padding:5px 30px;
+    
+  }
+  .btn:hover{
+    background-color:green;
+    color:#f9f9f9;
+  }
+  
+    </style>
+  </head>
+  <body>
+
+ <!--This is navigation bar code-->
+ <nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand">Navbar</a>   
+    </div>
+  </nav>
+
+
+  <div class="container-fluid text-center ">
+    <h3>ADD EMPLOYEE</h3>
+      <hr>
+      <br>
+    </div>
+  
+
+    <div class="container">
+
+      <div class="form">
+    <form action="/add_emp" method="post">
+       {% csrf_token %} 
+        <br>
+        <br>
+        <label for="first_name">Fisrt Name</label>
+        <input type="text"  id="first name" name="first_name"  value="{{first_name}}" ><br><br>
+      
+        <label for="last_name">Last Name</label>
+        <input type="text"  id="last_name" name="last_name" value="{{last_name}}"><br><br>
+         
+        <label for="salary">Salary</label>
+        <input type="text"  id="salary" name="salary" value="{{salary}}"><br><br>
+
+        <label for="bonus">Bonus</label>
+        <input type="text"  id="bonus" name="bonus" value="{{bonus }}"><br><br>
+
+        <label for="departmet">Department</label>
+        <input type="text"  id="departmet" name="departmet" value="{{departmet}}"><br><br>
+
+        <label for="role">Role</label>
+        <input type="text"  id="role" name="role" value="{{role}}"><br><br>
+
+        <label for="location">Location</label>
+        <input type="text"  id="location" name="location" value="{{location}}"><br><br>
+
+        <label for="phone">Ph.No.</label>
+        <input type="text"  id="phone" name="phone" value="{{phone}}"><br><br>
+         
+        <label for="hiring">Hired Date</label>
+        <input type="text"  id="hiring" value="{{hiring}}" name="hiring"><br><br>
+        <br>
+        <hr>
+    
+       <center>
+      <button type="submit" class="btn">Submit</button></center>
+      <br>
+      <br>
+    </form>
+  </div>
+  </div>
+   <br>
+   <br>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
